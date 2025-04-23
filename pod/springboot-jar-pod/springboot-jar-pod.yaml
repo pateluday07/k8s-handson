@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: springboot-jar-pod
+  labels:
+    app: springboot-jar-app
+spec:
+  containers:
+    - name: springboot-jar-container
+      image: uday07/springboot-docker-jar-demo:1.0.2
+      ports:
+      - containerPort: 8080

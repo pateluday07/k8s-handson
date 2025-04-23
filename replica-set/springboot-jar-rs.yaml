@@ -1,0 +1,21 @@
+  apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    name: springboot-jar-rs
+    labels:
+      app: springboot-jar-app
+  spec:
+    replicas: 3
+    selector:
+      matchLabels:
+        app: springboot-jar-app
+    template:
+      metadata:
+        labels:
+          app: springboot-jar-app
+      spec:
+        containers:
+          - name: springboot-jar-container
+            image: uday07/springboot-docker-jar-demo:1.0.2
+            ports:
+            - containerPort: 8080
