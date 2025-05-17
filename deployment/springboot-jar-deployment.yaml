@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: springboot-jar-container
-          image: uday07/springboot-docker-jar-demo:1.0.2
+          image: uday07/springboot-docker-jar-demo
           ports:
             - containerPort: 8080
